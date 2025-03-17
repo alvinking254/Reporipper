@@ -1,0 +1,25 @@
+.2                                     delete_github_repos.sh                                               #!/bin/bash
+
+TOKEN="your_github_personal_access_token"
+USERNAME="github_user_name"
+
+# Fetch all repositories (handling pagination)
+PAGE=1
+REPOS=()
+while :; do
+  RESPONSE=$(curl -s -H "Authorization: token $TOKEN" \
+    "https://api.github.com/user/repos?per_page=100&page=$PAGE")
+
+  # Break loop if no more repositories are returned
+  if [[ $(echo "$RESPONSE" | jq length) -eq 0 ]]; then
+    break
+  fi
+
+  # Append repositories to the list
+  REPOS+=($(echo "$RESPONSE" | jq -r '.[].name'))
+  ((PAGE++))
+done
+
+# Confirm before deleting
+echo "You are about to delete ${#REPOS[@]} repositories. Are you sure? (yes/no)"
+read CONFIRM
